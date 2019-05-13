@@ -14,7 +14,7 @@
     },
     "NGROK_OPTS": {
       "description": "other ngrok command options",
-      "value": ""
+      "value": "-"
     }
   },
   "buildpacks": [
