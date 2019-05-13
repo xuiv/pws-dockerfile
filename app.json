@@ -24,7 +24,7 @@
     {
       "url": "heroku/nodejs"
     }
-  ]
+  ],
   "name": "Node.js Sample",
   "description": "A barebones Node.js app using Express 4",
   "repository": "https://github.com/xuiv/node-js-sample",
