@@ -19,7 +19,7 @@
   },
   "buildpacks": [
     {
-      "url": "https://github.com/xuiv/heroku-buildpack-ngrok"
+      "url": "https://github.com/xuiv/heroku-buildpack-ngrok.git"
     },
     {
       "url": "heroku/nodejs"
