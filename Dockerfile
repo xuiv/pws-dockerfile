@@ -3,8 +3,7 @@ MAINTAINER https://github.com/cloudfoundry-incubator/diego-dockerfiles
 
 ENV PORT 8080
 ENV HOME /root
-ENV GOPATH /root/go
-ENV PATH /root/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 RUN mkdir -p $GOPATH \
   && apt-get update && apt-get -y install iptables curl \
