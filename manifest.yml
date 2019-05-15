@@ -1,0 +1,4 @@
+---
+properties:
+  logger_endpoint:
+    port: 8443
