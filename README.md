@@ -9,7 +9,7 @@ cf map-route appname xxx.xxx --hostname appname
 客户端运行
 ```
 gost -L tcp://:7083/:1083 -F quic+wss://appname.xxx.xxx:8443
-socat udp-listen:7082,reuseaddr,fork tcp:127.0.0.1:7083
+socat -t 10 udp-listen:7082,reuseaddr,fork tcp:127.0.0.1:7083
 udpspeeder -c -l0.0.0.0:7081 -r127.0.0.1:7082  -f20:10 -k "passwd"
 gost -L :1080 -F quic://localhost:7081
 ```
