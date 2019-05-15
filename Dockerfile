@@ -16,4 +16,6 @@ RUN apt-get update && apt-get -y install socat curl \
 EXPOSE 8080
 WORKDIR /root
 
-CMD (gost -L quic+ws://:8080 -L :1080 -L quic://:1081 &) && (socat tcp-listen:1082,reuseaddr,fork udp:127.0.0.1:1081 &)
+CMD (gost -L quic+ws://:8080 -L :1080 -L quic://:1081 &) \
+  && (udpspeeder -s -l0.0.0.0:1082 -r127.0.0.1:1081  -f20:10 -k "passwd" &) \
+  && (socat tcp-listen:1083,reuseaddr,fork udp:127.0.0.1:1082 &)
